@@ -77,8 +77,18 @@ body {
     background: chocolate !important;
     
 }
-
-
+.footer-style {
+    margin-top: 300px;
+    border: 2px solid chocolate;
+    padding: 25px;
+    background: url(/media/honeycombs.jpg); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    color:black;
+}
+.nounderline {
+  text-decoration: none !important
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
