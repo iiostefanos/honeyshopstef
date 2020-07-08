@@ -111,6 +111,8 @@
                     {% include 'includes/main-nav.html' %}
             </nav>
         </div>
+        
+            
      </header>
 
     {% if messages %}
@@ -126,12 +128,10 @@
     {% block postloadjs %}
     {% endblock %}
     <br>
-    <div class="container w-100 p-5">
     <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-black">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
-        </div>
+        <div class="col bg-black text-black">
+            <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
+        </div>            
     </div>
     <br>
 <!-- Footer -->
