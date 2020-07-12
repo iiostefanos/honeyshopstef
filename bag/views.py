@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
 def view_bag(request):
-    """ A view that renders the bag contents page """
+    """ A view that renders the cart contents page """
 
     return render(request, 'bag/bag.html')
 
@@ -31,11 +32,27 @@ def adjust_bag(request, item_id):
 
     
     if quantity > 0:
-        bag[item_id] = quantity
+            bag[item_id] = quantity
+            
     else:
-        del bag[item_id]
-        if not bag[item_id]:
            bag.pop(item_id)
+           
     
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+    
+@csrf_exempt
+def remove_from_bag(request, item_id):
+    """ Remove item from shopping bag """
+    bag = request.session.get('bag', {})
+    try:
+        
+        bag.pop(item_id)
+        request.session['bag'] = bag    
+        
+        return HttpResponse(status=200)
+    except Exception as e:
+        
+        return HttpResponse(status=500)
+
+        
