@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
-from django.views.decorators.csrf import csrf_exempt
+
 from django.contrib import messages
 
 from products.models import Product
@@ -48,7 +48,7 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
     
-@csrf_exempt
+
 def remove_from_bag(request, item_id):
     """ Remove item from shopping cart """
     bag = request.session.get('bag', {})
