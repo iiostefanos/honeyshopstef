@@ -56,9 +56,10 @@ body {
 
 }
 
-.dropdown-item, p {
+.dropdown-item, p, .form-group {
  color:#d2691e !important;   
 }
+
 
 .main-logo-link {
     width: fit-content;
@@ -249,7 +250,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    color: white; /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -262,7 +263,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
+    color: white;
 }
 
 .allauth-form-inner-content button,
@@ -277,8 +278,8 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #d2691e;
+    background-color:  #d2691e;
+    border: 1px solid white;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -290,8 +291,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
+	color: #d2691e;
+    background-color: #fff;
     border-color: #d2691e;
 }
 
