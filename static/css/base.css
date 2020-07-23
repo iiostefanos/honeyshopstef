@@ -3,12 +3,34 @@ html {
 }
 
 body {
-    background: url('/media/honeybkg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height:calc(100vh - 164px);
-    color:chocolate;
-    font-family: Sriracha, cursive;
+  font-family: Sriracha, cursive;
 }
+
+.img-wrapper {
+  position: relative;
+ }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  float:right;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 50%;
+}
+
 
 .border-black {
     border: 1px solid black !important;
@@ -25,45 +47,51 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    color:black !important;
+    color:#d2691e !important;
 }
 
 .call-out-header {
     text-transform: uppercase;
     color:white !important;
+
+}
+
+.dropdown-item, p {
+ color:#d2691e !important;   
 }
 
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
+.shop-honey-button {
     background:#d2691e;
     color:white;
     min-width: 260px;
+
 }
 
 .btn-black {
-    background: black;
+    background: #d2691e;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+    color: #d2691e !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #d2691e;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #d2691e;
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.shop-honey-button:hover,
+.shop-honey-button:active,
+.shop-honey-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -72,30 +100,28 @@ body {
 }
 
 .text-black {
-    color: black !important;
+    color:#d2691e !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid#d2691e !important;
 }
 
 .bg-black {
     background: #d2691e !important;
     
 }
-/*.footer-style {
-    margin-top: 300px;
+.footer-style {
     border: 2px solid chocolate;
-    padding: 25px;
-    background: url(/media/honeycombs.jpg); 
+    padding: 25px; 
     background-repeat: no-repeat;
     background-size: auto;
-    color:black;
+    color:#d2691e;
 }
-.nounderline {
-  text-decoration: none !important
-}*/
-
+.nounderline, a:link, a:visited {
+    text-decoration: none !important;
+    cursor: pointer;
+}
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -107,7 +133,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #d2691e !important;
     color: #fff !important;
 }
 
@@ -161,7 +187,7 @@ input[name='q']::placeholder {
     height: 0; 
     border-left: 4px solid transparent;
     border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid #d2691e;s
     position: absolute;
     top: -10px;
     right: 36px;
