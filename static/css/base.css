@@ -250,7 +250,7 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
-    color: white; /* text-secondary */
+    color: rgb(36, 34, 34); /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -263,7 +263,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: white;
+    color: #d2691e;
 }
 
 .allauth-form-inner-content button,
