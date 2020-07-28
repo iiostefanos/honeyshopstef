@@ -72,6 +72,7 @@ body {
 
 }
 
+
 .btn-black {
     background: #d2691e;
     color: white;
@@ -90,6 +91,7 @@ body {
     color: white !important;
 }
 
+
 .shop-honey-button:hover,
 .shop-honey-button:active,
 .shop-honey-button:focus,
@@ -97,7 +99,7 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: white; 
-    color: #d2691e;
+    color: #d2691e !important;
 }
 
 .text-black {
@@ -297,7 +299,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color:#d2691e; /* text-info */
 }
 
 
