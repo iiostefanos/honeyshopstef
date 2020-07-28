@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^j@g#!lf_=a^3u%47!m-xwplu&h2x8b8qa$g3i8u3$oj67si%&'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ('honeyshopstef.herokuapp.com', 'localhost')
+ALLOWED_HOSTS = ['honeyshopstef.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -83,8 +83,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'social_django.context_processors.backends',                #facebook login
-                'social_django.context_processors.login_redirect',          #facebook login
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
             ],
