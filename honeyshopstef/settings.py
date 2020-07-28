@@ -26,7 +26,7 @@ SECRET_KEY = '^j@g#!lf_=a^3u%47!m-xwplu&h2x8b8qa$g3i8u3$oj67si%&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['honeyshopstef.heroku.com', 'localhost']
 
 
 # Application definition
@@ -48,9 +48,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'about',
-    'allauth.socialaccount.providers.facebook',
-    'social_django',                                  #facebook login
-    'allauth.socialaccount.providers.google',         #google
+    
     # OTHER
     'crispy_forms',
 ]
@@ -110,8 +108,6 @@ AUTHENTICATION_BACKENDS = (
     
 )
 
-
-
 SITE_ID = 1
 
 
@@ -131,11 +127,17 @@ WSGI_APPLICATION = 'honeyshopstef.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }}
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 
