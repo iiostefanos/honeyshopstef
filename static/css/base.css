@@ -349,3 +349,12 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 116px;
     }
+
+    .call-out-header {
+        font-size: 12px;
+    }
+
+    .shop-honey-button {
+     max-width: 160px;
+
+}
