@@ -1,0 +1,360 @@
+html {
+ height: 100%;
+}
+
+body {
+  font-family: Sriracha, cursive;
+}
+
+.img-wrapper {
+  position: relative;
+ }
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.img-overlay {
+  position: absolute;
+  float:right;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-overlay:before {
+  content: ' ';
+  display: block;
+  /* adjust 'height' to position overlay content vertically */
+  height: 50%;
+}
+
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color:#d2691e !important;
+}
+
+.call-out-header {
+    text-transform: uppercase;
+    color:white !important;
+
+}
+
+.dropdown-item, p, .form-group {
+ color:#d2691e !important;   
+}
+
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-honey-button {
+    background:#d2691e;
+    color:white;
+    min-width: 260px;
+
+}
+
+
+.btn-black {
+    background: #d2691e;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: #d2691e !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #d2691e;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #d2691e;
+    color: white !important;
+}
+
+
+.shop-honey-button:hover,
+.shop-honey-button:active,
+.shop-honey-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: white; 
+    color: #d2691e !important;
+}
+
+.text-black {
+    color:#d2691e !important;
+}
+
+.border-black {
+    border: 1px solid#d2691e !important;
+}
+
+.bg-black {
+    background: #d2691e !important;
+    
+}
+.footer-style {
+    border: 2px solid chocolate;
+    padding: 25px; 
+    background-repeat: no-repeat;
+    background-size: auto;
+    color:#d2691e;
+}
+.nounderline, a:link, a:visited {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #d2691e !important;
+    color: #fff !important;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+.fa-arrow-circle-up {
+    font-size: 32px;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+/*.toasts-img {
+    width: 30%;
+    height: auto;
+}*/
+
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid #d2691e;s
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: rgb(36, 34, 34); /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #d2691e;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #d2691e;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:  #d2691e;
+    border: 1px solid white;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #d2691e;
+    background-color: #fff;
+    border-color: #d2691e;
+}
+
+.allauth-form-inner-content a {
+	color:#d2691e; /* text-info */
+}
+
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/*fixed top navbar only on medium and up */
+@media (min-width:992px) {
+    .fixed-top-desktop-only{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .header-container {
+    padding-top: 164px;
+    }
+}
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    .call-out-header {
+        font-size: 12px;
+    }
+
+    .shop-honey-button {
+     max-width: 160px;
+
+}
