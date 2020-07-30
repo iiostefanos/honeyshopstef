@@ -13,6 +13,7 @@ body {
 .img-responsive {
   width: 100%;
   height: auto;
+  margin-top: 5rem;
 }
 
 .img-overlay {
@@ -33,7 +34,7 @@ body {
 
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #d2691e !important;
 }
 
 /* from Bulma */
@@ -50,13 +51,17 @@ body {
     color:#d2691e !important;
 }
 
+ .small a {
+  color:#d2691e !important;  
+}
+
 .call-out-header {
     text-transform: uppercase;
     color:white !important;
 
 }
 
-.dropdown-item, p, .form-group {
+.dropdown-item, p, .form-group, .nounderline  {
  color:#d2691e !important;   
 }
 
@@ -121,9 +126,10 @@ body {
     background-size: auto;
     color:#d2691e;
 }
-.nounderline, a:link, a:visited {
+     a:link, a:visited {
     text-decoration: none !important;
     cursor: pointer;
+
 }
 .overlay {
 	height: 100%;
@@ -227,12 +233,6 @@ input[name='q']::placeholder {
 
 .arrow-dark {
     border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .cart-notification-wrapper {
@@ -350,8 +350,8 @@ input[name='q']::placeholder {
         padding-top: 116px;
     }
 
-    .display-6.call-out-header.text-black {
-        font-size: 2rem;
+    .display-9.call-out-header.text-black {
+        font-size: 1rem !important;
     }
 
     .nav-link {
@@ -387,5 +387,6 @@ input[name='q']::placeholder {
 
     .shop-honey-button {
      font-size: .7rem;
+     max-width: 0.8rem;
 
 }
